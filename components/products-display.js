@@ -1,16 +1,15 @@
 import products from "./products-data.js";
 
-
-export default function productsDisplay(){
-
- return(`
+export default function productsDisplay(){ 
+ return(` 
     <section>
      <div class="container w-100-pr mx-auto" id="product-display">
     ${
-      products.map((product,index)=> `
-      <div class="content m-10 shadow-10 p-10 radius-10">
-       <h3 class="mb-10">${product.product_name}</h3>
+  products.map((product,index)=>
+     `<div class="content m-10 shadow-10 p-10 radius-10">
+       <h3 class="p-10 m-3 radius-3 border-1 -sky-1">Product no: ${index + 1}</h3>
        <img class="w-100-pr radius-5" src="${product.image}">
+       <h3 class="p-10 m-3 radius-3 border-1 -sky-1">${product.product_name}</h3>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.barcode}</p>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.partnerSku}</p>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.sku}</p>
@@ -21,6 +20,7 @@ export default function productsDisplay(){
      </div>
     </section>
   `);
+
 
 
 }

@@ -1,6 +1,6 @@
 const products = [
     {
-        "product-id":"1",
+        "product_id":"1",
         "product_name": "Laundry Busket with Lid - A Laxurious Design Combining Elegance, Privacy, and Perfect Organization concept_home",
         "barcode": "6308338002",
         "partnerSku": "063-08-3380-02",
@@ -10,7 +10,7 @@ const products = [
         "image":"../images/Laundry basket with Lid.jpg"
     },
     {
-        "product-id":"2",
+        "product_id":"2",
         "product_name": "3-Tier Shoe Rack Organizer Beige 55.5x21.7x61 cm 9 Paris of Shoe concept_home",
         "barcode": "65170842031",
         "partnerSku": "046-08-3555B-03",
@@ -20,7 +20,7 @@ const products = [
         "image":"../images/3-Tier Shoe Rack.jpg"
     },
     // {
-    //     "product-id":"1",
+    //     "product_id":"1",
     //     "product_name": "",
     //     "barcode": "",
     //     "partnerSku": "",
