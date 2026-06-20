@@ -7,7 +7,7 @@ const products = [
         "sku": "Z571F1249538DDBBC99A7Z-1",
         "description": "null",
         "packing": "80 number Plastic",
-        "image":"../images/Laundry basket with Lid.jpg"
+        "image":"../images/laundry-basket-luxurious.jpg"
     },
     {
         "product_id":"2",
@@ -17,7 +17,17 @@ const products = [
         "sku": "ZFCC4A1B3F20A426977D3Z-1",
         "description": "null",
         "packing": "null",
-        "image":"../images/3-Tier Shoe Rack.jpg"
+        "image":"../images/3-tier-shoe-rack.jpg"
+    },
+    {
+        "product_id":"3",
+        "product_name": "Plastic Storage Box Multipurpose Transparent Plastic Storage Box With Wheels And Lockable Lid 80L Clear/black concept_home",
+        "barcode": "690332808080",
+        "partnerSku": "058-08-1180-18",
+        "sku": "Z4002AA5C55019F8DD884Z-1",
+        "description": "Fredy",
+        "packing": "",
+        "image":"../images/storage-box-80-liters.jpg"
     },
     // {
     //     "product_id":"1",
