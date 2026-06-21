@@ -19,6 +19,8 @@ export default function productsDisplay(){
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.sku}</p>
        <p class="sky ml-5 mt-5">Product Packing Type:</p>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.packing}</p>
+       <p class="sky ml-5 mt-5">Color:</p>
+       <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.color}</p>
        <p class="sky ml-5 mt-5">Description:</p>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.description}</p>
       </div>`).join('')
