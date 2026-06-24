@@ -11,8 +11,8 @@ export default function productsDisplay(){
        <img class="w-100-pr radius-5" src="${product.image}">
        <p class="sky ml-5 mt-5">Product Name:</p>
        <h3 class="p-10 m-3 radius-3 border-1 -sky-1">${product.product_name}</h3>
-       <p class="sky ml-5 mt-5">Product Barcode:</p>
-       <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.barcode}</p>
+       <p class="sky ml-5 mt-5">Barcode:</p>
+       <h2 class="p-10 m-3 blue radius-3 border-1 -sky-1">${product.barcode}</h2>
        <p class="sky ml-5 mt-5">Partner SKU:</p>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.partnerSku}</p>
        <p class="sky ml-5 mt-5">SKU:</p>
@@ -21,6 +21,8 @@ export default function productsDisplay(){
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.packing}</p>
        <p class="sky ml-5 mt-5">Color:</p>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.color}</p>
+       <p class="sky ml-5 mt-5">Product Barcode:</p>
+       <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.product_barcode}</p>
        <p class="sky ml-5 mt-5">Description:</p>
        <p class="p-10 m-3 radius-3 border-1 -sky-1">${product.description}</p>
       </div>`).join('')

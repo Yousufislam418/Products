@@ -7,6 +7,7 @@ const products = [
         "sku": "Z571F1249538DDBBC99A7Z-1",
         "packing": "80 number Plastic",
         "color": "White",
+        "product_barcode": "6287018853949",
         "image":"../images/laundry-basket-luxurious.jpg",
         "description": "null"
     },
@@ -18,6 +19,7 @@ const products = [
         "sku": "ZFCC4A1B3F20A426977D3Z-1",
         "packing": "null",
         "color": "Beige",
+        "product_barcode": "",
         "image":"../images/3-tier-shoe-rack.jpg",
         "description": "null"
     },
@@ -29,6 +31,7 @@ const products = [
         "sku": "Z4002AA5C55019F8DD884Z-1",
         "packing": "null",
         "color": "Transparent",
+        "product_barcode": "",
         "image":"../images/storage-box-80-liters.jpg",
         "description": "Fredy"
     },
@@ -40,6 +43,7 @@ const products = [
         "sku": "ZD5EB47809C9CCDB35548Z-1",
         "packing": "Roll",
         "color": "White",
+        "product_barcode": "",
         "image":"../images/Rolling Shelf Organizer 3-Tier White.jpg",
         "description": "359B"
     },
@@ -51,9 +55,82 @@ const products = [
         "sku": "Z0D3FD1EB8D17AB5B29CDZ-1",
         "packing": "Roll",
         "color": "Black",
+        "product_barcode": "",
         "image":"../images/Rolling Shelf Organizer 3-Tier Black.jpg",
         "description": "359B"
     },
+    {
+        "product_id":"6",
+        "product_name": "4 pieces Trash bin for offices and rooms, Beige 13.5 liter concept_home",
+        "barcode": "43083264034",
+        "partnerSku": "043-08-3264-03*4",
+        "sku": "ZA0C41617055314D4DBA3Z-1",
+        "packing": "18 number Plastic",
+        "color": "Beige",
+        "product_barcode": "",
+        "image":"../images/ikea Trash bin beige.jpg",
+        "description": ""
+    },
+    {
+        "product_id":"7",
+        "product_name": "Laundry Basket With Lid - A Luxurious Design Combining Elegance, Privacy, and Perfect Organization concept-home",
+        "barcode": "2763487952487",
+        "partnerSku": "063-08-2248-02",
+        "sku": "Z318C1A68BC07A606E9E2Z-1",
+        "packing": "28 Number Plastic",
+        "color": "White",
+        "product_barcode": "6287000282641",
+        "image":"../images/Laundry basket with Lid Luxurious design White 60 Liters.jpg",
+        "description": "aap Art No.: 1-00248, 60 Liters"
+    },
+    {
+        "product_id":"8",
+        "product_name": "Plastic Storage Box Multipurpose Transparent Plastic Storage box With Lockable Lid 30L Clear/Black concept_home",
+        "barcode": "690058081130",
+        "partnerSku": "058-08-1430-18",
+        "sku": "Z64B70B63E1B45849B0C2Z-1",
+        "packing": "24 Number Plastic",
+        "color": "Tranparent Clear/Black",
+        "product_barcode": "6287018852126",
+        "image":"../images/Storage box transparent 30 Liters.jpg",
+        "description": "30 Liters"
+    },
+    {
+        "product_id":"9",
+        "product_name": "12-pces Cawa Cups White/Green/Red 60Ml | 90 ML / 120 ML badraig",
+        "barcode": "6901200381224",
+        "partnerSku": "008-09-1603-13",
+        "sku": "ZC539FDFD25305110E045Z-3",
+        "packing": "Bubble",
+        "color": "Red",
+        "product_barcode": "6901200381224",
+        "image":"../images/cawa cups Red 120.jpg",
+        "description": "YW-RED-120 ML, 120cc CAWA CUP"
+    },
+    {
+        "product_id":"10",
+        "product_name": "12-pces Cawa Cups White/Green/Red 60Ml | 90 ML / 120 ML badraig",
+        "barcode": "6901200621054",
+        "partnerSku": "008-09-1602-13",
+        "sku": "ZC539FDFD25305110E045Z-2",
+        "packing": "Bubble",
+        "color": "Red",
+        "product_barcode": "6901200621054",
+        "image":"../images/Cawa cups Red 90.jpg",
+        "description": "YW-RED-90 ML, 90cc CAWA CUP"
+    },
+    // {
+    //     "product_id":"11",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
     // {
     //     "product_id":"",
     //     "product_name": "",
@@ -61,9 +138,107 @@ const products = [
     //     "partnerSku": "",
     //     "sku": "",
     //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
     //     "image":"",
     //     "description": ""
-    // }
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
+    // {
+    //     "product_id":"",
+    //     "product_name": "",
+    //     "barcode": "",
+    //     "partnerSku": "",
+    //     "sku": "",
+    //     "packing": "",
+    //     "color": "",
+    //     "product_barcode": "",
+    //     "image":"",
+    //     "description": ""
+    // },
 ];
 
 export default products;
