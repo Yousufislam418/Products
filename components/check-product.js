@@ -11,13 +11,16 @@ export default function checkProduct(){
  document.getElementById('check-product-data-load').innerHTML = '';
  
  const checkInput = document.getElementById('checkInput');
+  
+ if(!checkInput.value){
+   return;
+ }
     
  const filterProducts = products.filter((product,index)=> product.barcode == checkInput.value || product.product_barcode == checkInput.value); 
 
  if(filterProducts == ""){
   
-  //  return  console.log('no product found'); 
-  document.getElementById('check-product-data-load').innerHTML = `<div><h1>No Product Found!</h1></div>`;
+   return document.getElementById('check-product-data-load').innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
  }
 
 
