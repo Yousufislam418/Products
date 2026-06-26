@@ -5,16 +5,54 @@ import products from "./products-data.js";
 
 export default function searchProduct(){ 
 
-     window.addEventListener('DOMContentLoaded',()=>{
+ window.addEventListener('DOMContentLoaded',()=>{
   const btn = document.getElementById('search-btn');
-    btn.addEventListener('click',()=>{ 
- document.getElementById('search-product-data-load').innerHTML = '';
+
+  
+  // Scan btn Listener ------------------------------------------------->
+  const scanBtn = document.getElementById('scan-btn');
+ scanBtn.addEventListener('click',()=>{
+   
  
- const searchInput = document.getElementById('searchInput');
+
+  function onScanSuccess(decodedText) {
+    document.getElementById("result").innerText = "Scanned: " + decodedText;
+    console.log("Scanned code:", decodedText);
+    
+     html5QrCode.stop();
+
+    dataFunction(decodedText);
+
+  }
+
+  const html5QrCode = new Html5Qrcode("reader");
+
+  html5QrCode.start(
+    { facingMode: "environment" }, 
+    { fps: 10, qrbox: 250 },      
+    onScanSuccess,
+  );
+ });
+
+
+// Search btn Listener
+ btn.addEventListener('click',()=>{ 
+const searchInput = document.getElementById('searchInput');
   
  if(!searchInput.value){ return; }
+
+dataFunction(searchInput.value);
+ }); // add listener end
+
+
+const dataFunction = (barcodeNumber) =>{
+ document.getElementById('search-product-data-load').innerHTML = '';
     
- const filterProducts = products.filter((product,index)=> product.barcode == searchInput.value || product.product_barcode == searchInput.value); 
+ const filterProducts = products.filter((product,index)=> 
+   product.barcode == barcodeNumber || 
+ product.product_barcode == barcodeNumber ||
+   product.partnerSku == barcodeNumber
+); 
 
  if(filterProducts == ""){
    return document.getElementById('search-product-data-load').innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
@@ -62,9 +100,10 @@ export default function searchProduct(){
     </div>
  `);
 
-  searchInput.value = '';
+  searchInput.value = ''; 
 
-    }); // add listener end
+ } // dataFunction end
+
  }); // DOM end
 
 
@@ -75,12 +114,22 @@ export default function searchProduct(){
    <div class="w-80-pr mx-auto flex m-20">
     <input class="input" id="searchInput" type="text" name="searchinput" placeholder="Barcode">
     <button class="btn-md danger ml-3" id="search-btn">Search</button>
+    <button class="btn-md primary ml-3" id="scan-btn">Scan</button>
    </div>  
   </section> 
 
   <section>
    <div class="w-90-pr mx-auto" id="search-product-data-load"></div>
   </section>
+
+
+  <section>
+   <div id="reader" style="width:300px; margin:auto;"></div>
+   <div id="result"></div>
+
+
+  </section>
+
 
  `);
 }

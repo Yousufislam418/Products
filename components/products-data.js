@@ -191,6 +191,18 @@ const products = [
         "image":"../images/Strainer white Rice wash.jpg",
         "description": "2 in 1 COLANDER Drain and serve, art no. 226"
     },
+    {
+        "product_id":"16",
+        "product_name": "Machine Basket_home",
+        "barcode": "65112254559",
+        "partnerSku": "043-08-3504-04",
+        "sku": "Z64A3CF07335A679402D3Z-1",
+        "packing": "14 number Plastic",
+        "color": "White",
+        "product_barcode": "",
+        "image":"../images/Strainer white Rice wash.jpg",
+        "description": "2 in 1 COL"
+    },
     // {
     //     "product_id":"17",
     //     "product_name": "",

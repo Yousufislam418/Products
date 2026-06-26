@@ -6,7 +6,7 @@ export default function productsDisplay(){
    <div class="container w-100-pr mx-auto" id="product-display"> 
   ${ 
    `<div class="mt-11">
-     <h2 class="ml-10 px-20 fs-25 py-5 radius-5 bg-base navy inline">Total Products: ${products.length}</h2>
+     <h2 class="ml-10 px-20 fs-25 py-5 radius-5 bg-red navy inline">Total Products: ${products.length}</h2>
     </div>`
   +
   products.map((product,index)=>
