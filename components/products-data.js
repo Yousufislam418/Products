@@ -167,30 +167,30 @@ const products = [
         "image":"../images/3-layer bathroom kitchen trolly white.jpg",
         "description": "Al Abras Plastic, 1-00300"
     },
-    // {
-    //     "product_id":"15",
-    //     "product_name": "",
-    //     "barcode": "",
-    //     "partnerSku": "",
-    //     "sku": "",
-    //     "packing": "",
-    //     "color": "",
-    //     "product_barcode": "",
-    //     "image":"",
-    //     "description": ""
-    // },
-    // {
-    //     "product_id":"16",
-    //     "product_name": "",
-    //     "barcode": "",
-    //     "partnerSku": "",
-    //     "sku": "",
-    //     "packing": "",
-    //     "color": "",
-    //     "product_barcode": "",
-    //     "image":"",
-    //     "description": ""
-    // },
+    {
+        "product_id":"15",
+        "product_name": "4-Piece Aluminium Cookware Pot Set Silver elamal",
+        "barcode": "9633000010581",
+        "partnerSku": "004-02-1204",
+        "sku": "Z7F7D4A4216DFC5958C85Z-1",
+        "packing": "none",
+        "color": "",
+        "product_barcode": "9633000010581",
+        "image":"../images/Elamal cookware khaleji.jpg",
+        "description": "Pure Alumium Set 4, Cookware since 1969"
+    },
+    {
+        "product_id":"16",
+        "product_name": "Machine Basket Rice Wash Sieve Strainer White 22.8x26.5x19.5 cm concept_home",
+        "barcode": "65112254559",
+        "partnerSku": "052-08-3226-02",
+        "sku": "Z64A3CF07335A679402D3Z-1",
+        "packing": "14 number Plastic",
+        "color": "White",
+        "product_barcode": "",
+        "image":"../images/Strainer white Rice wash.jpg",
+        "description": "2 in 1 COLANDER Drain and serve, art no. 226"
+    },
     // {
     //     "product_id":"17",
     //     "product_name": "",

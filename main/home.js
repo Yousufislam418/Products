@@ -1,5 +1,5 @@
 import navbar from "../components/navbar.js";
-import products from "../components/products-display.js";
+import Menu from "../components/menu.js";
 
 function home(eve){
 const display = document.getElementById('home');
@@ -7,4 +7,4 @@ const display = document.getElementById('home');
 }
 
 home(navbar());
-home(products());
+home(Menu());
