@@ -18,7 +18,7 @@ export default function productsDisplay(){
        <p class="green ml-5 mt-5">Product Name:</p>
        <h3 class="p-10 m-3 radius-3">${product.product_name}</h3>
        <!------------>
-       <p class="green ml-5 mt-5">Barcode:</p>
+       <p class="green ml-5 mt-5">Product Barcode:</p>
        <h2 class="p-10 m-3 navy radius-3">${product.barcode}</h2>
        <!------------>
        <p class="green ml-5 mt-5">Partner SKU:</p>
@@ -33,8 +33,11 @@ export default function productsDisplay(){
        <p class="green ml-5 mt-5">Color:</p>
        <p class="p-10 m-3 radius-3">${product.color}</p>
        <!------------>
-       <p class="green ml-5 mt-5">Product Barcode:</p>
-       <p class="p-10 m-3 radius-3">${product.product_barcode}</p>
+       <p class="green ml-5 mt-5">noon arcode:</p>
+       <h2 class="p-10 m-3 navy radius-3">${product.noon_barcode}</h2>
+       <!------------>
+       <p class="green ml-5 mt-5">Amazon barcode:</p>
+       <p class="p-10 m-3 radius-3 -1 -green-1">${product.amazon_barcode}</p>
        <!------------>
        <p class="green ml-5 mt-5">Description:</p>
        <p class="p-10 m-3 radius-3 -1 -green-1">${product.description}</p>
