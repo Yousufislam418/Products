@@ -1,44 +1,35 @@
 import products from "./products-data.js";
 
-
+// Root Function
 export default function SearchBarcodeByCamera(){ 
+// DOM Listener Function
+ document.addEventListener("DOMContentLoaded",()=>{  
+// Get Document ID
+ const barcode_camera_data_display = document.getElementById('barcode-camera-data-load');
+ const input = document.getElementById('barcode-input'); 
 
-
- document.addEventListener("DOMContentLoaded",()=>{ 
 // Search btn click event
- document.getElementById('search-barcode-btn').addEventListener('click',()=>{
+ document.getElementById('search-barcode-btn').addEventListener('click',()=>{ 
+  barcode_camera_data_display.innerHTML = '';
    barcodeScanHandler();
  });
 
 //  barcode-input-btn click event
  document.getElementById('barcode-input-btn').addEventListener('click',()=>{ 
-  const input = document.getElementById('barcode-input');
+  barcode_camera_data_display.innerHTML = '';
+   if(input.value == ''){ return; } 
    filterDataHandler(input.value); 
  });
-
-
-
-
 
 // Barcode Scan Handler function
  function barcodeScanHandler(){
    function onScanSuccess(decodedText) {
 
-    document.getElementById("result").innerText = "Scanned: " + decodedText;
-
-    console.log("Scanned code:", decodedText);
-
+   document.getElementById("result").innerText = "Scanned: " + decodedText;
     filterDataHandler(decodedText);
-
+     input.value = decodedText;
      html5QrCode.stop();
-
-
   }
-
-  function onScanError(errorMessage) {
-    // console.log(errorMessage);
-  }
-
 
   const html5QrCode = new Html5Qrcode("reader");
 
@@ -47,7 +38,6 @@ export default function SearchBarcodeByCamera(){
     { facingMode: "environment" },
     { fps: 10, qrbox: 250 },
     onScanSuccess,
-    onScanError
   );
 
 } // barcodeScanHandler  
@@ -56,22 +46,21 @@ export default function SearchBarcodeByCamera(){
 // filterDataHandler Function
 const filterDataHandler = (barcodeNumber) =>{
 
-  document.getElementById('barcode-camera-data-load').innerHTML = "";
-
  const filterProducts = products.filter((product,index)=> 
    product.barcode == barcodeNumber || 
-   product.noon_barcode == barcodeNumber ? barcodeNumber : '0'+ barcodeNumber ||
+   product.noon_barcode == barcodeNumber ||
    product.amazon_barcode == barcodeNumber ||
-   product.partnerSku == barcodeNumber
+   product.partnerSku == barcodeNumber ||
+   barcodeNumber == '0'+ product.noon_barcode
  ); 
 
  if(filterProducts == ""){
-   return document.getElementById('barcode-camera-data-load').innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
+   return barcode_camera_data_display.innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
  }
 
  filterProducts.map((product,index)=> 
 
-   document.getElementById('barcode-camera-data-load').innerHTML += `
+  barcode_camera_data_display.innerHTML += `
     <div>
        <h2 class="p-10 m-3 radius-3">Product no: ${product.product_id}</h2>
        <!------------->
@@ -113,25 +102,21 @@ const filterDataHandler = (barcodeNumber) =>{
     </div>
  `);
 
- 
-
  } // filterDataHandler end
-// -------------------------------------->
-
-
 
 }); // Dom Listener End
 
  return(`
-
 <!--------------->
   <section> 
-   <div class="w-90-pr flex gap-10 mx-auto m-20">
-   <div class="flex">
+   <div class="w-90-pr flex gap-10 justify-between m-20">
+   <div class="flex gap-3">
     <input class="input" id="barcode-input" type="text" name="searchinput" placeholder="Barcode">
-    <button id="barcode-input-btn" class="blue px-8 ml-3 border-none radius-5">OK</button>
+    <button id="barcode-input-btn" class="btn-sm h-40">OK</button>
    </div>
-    <button class="btn-md danger ml-3" id="search-barcode-btn">Search Barcode Camera</button>
+   <div>
+    <button class="btn-sm danger ml-3" id="search-barcode-btn">Scan Camera</button>
+   </div>
    </div>  
   </section> 
 
@@ -141,9 +126,11 @@ const filterDataHandler = (barcodeNumber) =>{
   </section>
 
 <!--------------->
-  <div id="reader" style="width:300px; margin:auto;"></div>
- <div id="result"></div>
-
+ <section>
+  <div id="reader" class="w-300 m-auto"></div>
+  <div id="result"></div>
+ </section>
 
  `);
 } 
+

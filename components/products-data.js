@@ -74,8 +74,8 @@ const products = [
         "color": "Beige",
         "noon_barcode": "43083264034",
         "amazon_barcode": "",
-        "image":"../images/ikea Trash bin Beige.jpg",
-        "description": ""
+        "image":"../images/ikea Trash Bin 13.5 Liter Beige.jpg",
+        "description": "Plasticna ikea 13.5 Liter Trash Bin Beige"
     },
     {
         "product_id":"7",
