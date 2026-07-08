@@ -493,19 +493,19 @@ const products = [
         "image":"../images/3-Tier Shoe Rack Plasticna Black.jpg",
         "description": "Multi-Use Plastic Shelves (3 Rack) Art no. 555 B, item Code: I-SH-555-3R-BLK, Plasticna"
     },
-    // {
-    //     "product_id":"39",
-    //     "product_name": "",
-    //     "barcode": "",
-    //     "partnerSku": "",
-    //     "sku": "",
-    //     "packing": "",
-    //     "color": "",
-    //     "noon_barcode": "",
-    //     "amazon_barcode": "",
-    //     "image":"../images/.jpg",
-    //     "description": ""
-    // },
+    {
+        "product_id":"39",
+        "product_name": "Plasticna Waste Bin I-BK-264-BLK Plastic Black 13 Liters",
+        "barcode": "",
+        "partnerSku": "043-08-3264-01",
+        "sku": "",
+        "packing": "",
+        "color": "",
+        "noon_barcode": "",
+        "amazon_barcode": "",
+        "image":"../images/Plastic 13.5 Liters Waste bin Black.jpg",
+        "description": "Ikea Waste bin 13.5 Liter, Plasticna"
+    },
     // {
     //     "product_id":"40",
     //     "product_name": "",

@@ -21,10 +21,12 @@ dataFunction(searchInput.value);
 const dataFunction = (barcodeNumber) =>{
     
  const filterProducts = products.filter((product,index)=> 
+   product.product_id == barcodeNumber || 
    product.barcode == barcodeNumber || 
    product.noon_barcode == barcodeNumber ||
    product.amazon_barcode == barcodeNumber ||
-   product.partnerSku == barcodeNumber
+   product.partnerSku == barcodeNumber || 
+   barcodeNumber == '0'+ product.noon_barcode
  ); 
 
  if(filterProducts == ""){
@@ -87,7 +89,7 @@ const dataFunction = (barcodeNumber) =>{
  return(`
   <section> 
    <div class="w-90-pr flex gap-10 mx-auto m-20">
-    <input class="input" id="searchInput" type="text" name="searchinput" placeholder="Barcode">
+    <input class="input" id="searchInput" type="text" name="searchinput" placeholder="Barcode" autofocus>
     <button class="btn-md danger ml-3" id="search-btn">Search</button>
    </div>  
   </section> 

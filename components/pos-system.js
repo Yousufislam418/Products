@@ -1,45 +1,46 @@
 import products from "./products-data.js";
 
-// Root Function
-export default function SearchBarcodeByCamera(){ 
+// Main Funtion this Page
+export default function PosSystem(){
+//------------------------------>
 // DOM Listener Function
  document.addEventListener("DOMContentLoaded",()=>{  
 // Get Document ID
- const barcode_camera_data_display = document.getElementById('barcode-camera-data-load');
- const input = document.getElementById('barcode-input'); 
+ const barcode_pos_system_data_display = document.getElementById('barcode-pos-system-data-load');
+ const input = document.getElementById('pos-barcode-input'); 
+ const posBarcodeInputBtn = document.getElementById('pos-barcode-input-btn');
+ const poSbarcodeBtn = document.getElementById('pos-barcode-btn');
 
-// Search btn click event
- document.getElementById('search-barcode-btn').addEventListener('click',()=>{ 
-  barcode_camera_data_display.innerHTML = '';
-   barcodeScanHandler();
- });
-
-//  barcode-input-btn click event
- document.getElementById('barcode-input-btn').addEventListener('click',()=>{ 
-  barcode_camera_data_display.innerHTML = '';
+// Pos barcode-input-btn click event
+ posBarcodeInputBtn.addEventListener('click',()=>{ 
+  barcode_pos_system_data_display.innerHTML = '';
    if(input.value == ''){ return; } 
    filterDataHandler(input.value); 
  });
 
+// Search Pos btn click event
+ poSbarcodeBtn.addEventListener('click',()=>{ 
+  barcode_pos_system_data_display.innerHTML = '';
+   barcodeScanHandler();
+ });
+
 // Barcode Scan Handler function
  function barcodeScanHandler(){
-   function onScanSuccess(decodedText) {
+// ------------------------------>
+input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {  // scanner enter দিলে
+        let code = input.value.trim();
+        if (code) {
+           document.getElementById("result").innerText = "Scanned: " + code; 
 
-   document.getElementById("result").innerText = "Scanned: " + decodedText;
-    filterDataHandler(decodedText);
-     input.value = decodedText;
-     html5QrCode.stop();
-  }
+   filterDataHandler(code);
 
-  const html5QrCode = new Html5Qrcode("reader");
-
-  html5QrCode.start(
-
-    { facingMode: "environment" },
-    { fps: 10, qrbox: 250 },
-    onScanSuccess,
-  );
-
+            // console.log("Scanned:", code);
+            // input.value = code;
+        }
+    }
+});
+// ------------------------------>
 } // barcodeScanHandler  
 
 // -------------------------------------->
@@ -47,6 +48,7 @@ export default function SearchBarcodeByCamera(){
 const filterDataHandler = (barcodeNumber) =>{
 
  const filterProducts = products.filter((product,index)=> 
+
    product.product_id == barcodeNumber || 
    product.barcode == barcodeNumber || 
    product.noon_barcode == barcodeNumber ||
@@ -56,12 +58,12 @@ const filterDataHandler = (barcodeNumber) =>{
  ); 
 
  if(filterProducts == ""){
-   return barcode_camera_data_display.innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
+   return barcode_pos_system_data_display.innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
  }
 
  filterProducts.map((product,index)=> 
 
-  barcode_camera_data_display.innerHTML += `
+  barcode_pos_system_data_display.innerHTML += `
     <div>
        <h2 class="p-10 m-3 radius-3">Product no: ${product.product_id}</h2>
        <!------------->
@@ -112,26 +114,27 @@ const filterDataHandler = (barcodeNumber) =>{
   <section> 
    <div class="w-90-pr flex gap-10 justify-between m-20">
    <div class="flex gap-3">
-    <input class="input" id="barcode-input" type="text" name="searchinput" placeholder="Barcode">
-    <button id="barcode-input-btn" class="btn-sm h-40">OK</button>
+    <input class="input" id="pos-barcode-input" type="text" name="searchinput" placeholder="Barcode" autofocus>
+    <button id="pos-barcode-input-btn" class="btn-sm h-40">OK</button>
    </div>
    <div>
-    <button class="btn-sm danger ml-3" id="search-barcode-btn">Scan Camera</button>
+    <button class="btn-sm danger ml-3" id="pos-barcode-btn">Scan POS Device</button>
    </div>
    </div>  
   </section> 
 
 <!--------------->
   <section>
-   <div class="w-90-pr mx-auto" id="barcode-camera-data-load"></div>
+   <div class="w-90-pr mx-auto" id="barcode-pos-system-data-load"></div>
   </section>
 
 <!--------------->
  <section>
-  <div id="reader" class="w-300 m-auto"></div>
-  <div id="result"></div>
+  <div class="m-20">
+   <p id="result"></p>
+  </div>
  </section>
 
- `);
-} 
 
+  `);
+}
