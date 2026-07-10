@@ -1,5 +1,6 @@
 import navbar from "../components/navbar.js";
 import SearchBarcodeByCamera from "../components/search-barcode-by-camera.js";
+import Footer from "../components/footer.js";
 
 
 function searchBarcodeByCameraProductDisplay(eve){
@@ -8,3 +9,4 @@ function searchBarcodeByCameraProductDisplay(eve){
 
 searchBarcodeByCameraProductDisplay(navbar());
 searchBarcodeByCameraProductDisplay(SearchBarcodeByCamera());
+searchBarcodeByCameraProductDisplay(Footer());

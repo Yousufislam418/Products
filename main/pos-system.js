@@ -1,5 +1,6 @@
 import navbar from "../components/navbar.js";
 import PosSystem from "../components/pos-system.js";
+import Footer from "../components/footer.js";
 
 
 function PosSystemDisplay(eve){
@@ -8,3 +9,4 @@ function PosSystemDisplay(eve){
 
 PosSystemDisplay(navbar());
 PosSystemDisplay(PosSystem());
+PosSystemDisplay(Footer());

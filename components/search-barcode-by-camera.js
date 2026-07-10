@@ -7,6 +7,7 @@ export default function SearchBarcodeByCamera(){
 // Get Document ID
  const barcode_camera_data_display = document.getElementById('barcode-camera-data-load');
  const input = document.getElementById('barcode-input'); 
+ const tone = document.getElementById('tone');
 
 // Search btn click event
  document.getElementById('search-barcode-btn').addEventListener('click',()=>{ 
@@ -28,6 +29,7 @@ export default function SearchBarcodeByCamera(){
    document.getElementById("result").innerText = "Scanned: " + decodedText;
     filterDataHandler(decodedText);
      input.value = decodedText;
+     tone.play();
      html5QrCode.stop();
   }
 
@@ -117,6 +119,7 @@ const filterDataHandler = (barcodeNumber) =>{
    </div>
    <div>
     <button class="btn-sm danger ml-3" id="search-barcode-btn">Scan Camera</button>
+    <audio id="tone" src="../audio/silent-beep.mp3">
    </div>
    </div>  
   </section> 

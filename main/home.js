@@ -1,5 +1,6 @@
 import navbar from "../components/navbar.js";
 import Menu from "../components/menu.js";
+import Footer from "../components/footer.js";
 
 function home(eve){
 const display = document.getElementById('home');
@@ -8,3 +9,4 @@ const display = document.getElementById('home');
 
 home(navbar());
 home(Menu());
+home(Footer());

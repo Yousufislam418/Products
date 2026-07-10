@@ -1,14 +1,19 @@
 export default function navbar(){
  return(`
     <section class="sticky top-0">
-     <div class="bg-blue m-5 shadow-5">
-      <ul class="flex justify-evenly md-fs-18 p-8 bold">
-       <li><a href="home.html" class="white">Home</a></li>
-       <li><a href="search-product.html" class="white">Search</a></li>
-       <li><a href="products-display.html" class="white">Products</a></li>
-       <li><a href="#" class="white">Add Product</a></li>
+     <div class="container bg-blue m-5 shadow-5">
+     <div class="content flex">
+      <ul class="p-10 ml-10">
+       <li class="align-center"><a href="home.html"><img class="w-25" src="../icons/home.png"></a></li>
+      </ul>
+      <ul class="w-90-pr flex justify-around p-10 md-fs-18 bold">
+       <li class="align-center"><a class="white" href="search-product.html">Search Product</a></li>
+       <li class="align-center"><a class="white" href="products-display.html">Products</a></li>
+       <li class="align-center"><a class="white" href="search-barcode-by-camera.html">Barcode Camera</a></li>
+       <li class="align-center"><a class="white" href="pos-system.html">Pos System</a></li>
       </ul>
      </div>
-    </section>
+    </div>
+   </section>
   `);
 }

@@ -36,7 +36,7 @@ input.addEventListener("keydown", function(e) {
    filterDataHandler(code);
 
             // console.log("Scanned:", code);
-            // input.value = code;
+          input.value = code;
         }
     }
 });
