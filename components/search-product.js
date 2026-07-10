@@ -36,13 +36,16 @@ const dataFunction = (barcodeNumber) =>{
  filterProducts.map((product,index)=> 
 
    document.getElementById('search-product-data-load').innerHTML += `
-    <div>
+    <div class="md-flex gap-10">
+     <div class="w-80-pr">
        <h2 class="p-10 m-3 radius-3">Product no: ${product.product_id}</h2>
        <!------------->
-       <img class="w-100-pr radius-5" src="${product.image}">
+       <img class="w-95-pr radius-5" src="${product.image}">
+     </div>
+     <div>
        <!------------->
        <p class="sky ml-5 mt-5">Product Name:</p>
-       <h3 class="p-10 m-3 radius-3">${product.product_name}</h3>
+       <h2 class="p-10 m-3 radius-3">${product.product_name}</h2>
        <p class="border-1 -blue-4"></p>
        <!------------->
        <p class="sky ml-5 mt-5">Barcode:</p>
@@ -74,6 +77,7 @@ const dataFunction = (barcodeNumber) =>{
        <!------------->
        <p class="sky ml-5 mt-5">Description:</p>
        <p class="p-10 m-3 radius-3">${product.description}</p>
+     </div>
     </div>
  `);
 
