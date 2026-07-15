@@ -41,28 +41,28 @@ const products = [
 {
  "product_id":"4",
  "product_name": "3-Tier Multipurpose Rolling Shelves Cart Organizer White 83x53.5x32cm concept_home",
- "barcode": "",
+ "barcode": "6287015356979",
  "partnerSku": "044-08-4359B-02",
  "sku": "ZD5EB47809C9CCDB35548Z-1",
  "packing": "Roll",
  "color": "White",
- "noon_barcode": "6287015356979",
+ "noon_barcode": "",
  "amazon_barcode": "",
  "image":"../images/6287015356979.jpg",
- "description": "359B"
+ "description": "359B 3 Rack Trolly - White"
 },
 {
  "product_id":"5",
  "product_name": "3-Tier Multipurpose Rolling Shelves Cart Organizer Black 83x53.5x32cm concept_home",
- "barcode": "",
+ "barcode": "6287015359031",
  "partnerSku": "044-08-4359B-01",
  "sku": "Z0D3FD1EB8D17AB5B29CDZ-1",
  "packing": "Roll",
  "color": "Black",
- "noon_barcode": "6287015359031",
+ "noon_barcode": "",
  "amazon_barcode": "X002FINPKZ",
  "image":"../images/6287015359031.jpg",
- "description": "359B"
+ "description": "359B 3 Rack Trolly - Black"
 },
 {
  "product_id":"6",

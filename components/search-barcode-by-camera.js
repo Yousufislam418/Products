@@ -64,13 +64,16 @@ const filterDataHandler = (barcodeNumber) =>{
  filterProducts.map((product,index)=> 
 
   barcode_camera_data_display.innerHTML += `
-    <div>
-       <h2 class="p-10 m-3 radius-3">Product no: ${product.product_id}</h2>
-       <!------------->
-       <img class="w-100-pr radius-5" src="${product.image}">
-       <!------------->
+    <div class="lg-flex gap-20">
+    <!------------->
+     <div class="w-100-pr">
+      <h2 class="p-10 m-3 radius-3">Product no: ${product.product_id}</h2>
+      <img class="w-100-pr radius-5" src="${product.image}">
+     </div>
+    <!------------->
+     <div class="w-100-pr fs-18">
        <p class="sky ml-5 mt-5">Product Name:</p>
-       <h3 class="p-10 m-3 radius-3">${product.product_name}</h3>
+       <h3 class="p-10 lg-fs-25 m-3 radius-3">${product.product_name}</h3>
        <p class="border-1 -blue-4"></p>
        <!------------->
        <p class="sky ml-5 mt-5">Barcode:</p>
@@ -102,6 +105,7 @@ const filterDataHandler = (barcodeNumber) =>{
        <!------------->
        <p class="sky ml-5 mt-5">Description:</p>
        <p class="p-10 m-3 radius-3">${product.description}</p>
+     </div>
     </div>
  `);
 
@@ -113,7 +117,7 @@ const filterDataHandler = (barcodeNumber) =>{
 <!--------------->
   <section> 
    <div class="w-90-pr flex gap-10 justify-between m-20">
-   <div class="flex gap-3">
+   <div class="flex w-90-pr gap-3">
     <input class="input" id="barcode-input" type="text" name="searchinput" placeholder="Barcode">
     <button id="barcode-input-btn" class="btn-sm h-40">OK</button>
    </div>
@@ -125,7 +129,7 @@ const filterDataHandler = (barcodeNumber) =>{
   </section> 
 
 <!--------------->
-  <section>
+  <section class="mb-50">
    <div class="w-90-pr mx-auto" id="barcode-camera-data-load"></div>
   </section>
 

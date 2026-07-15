@@ -2,7 +2,7 @@ import products from "./products-data.js";
 
 export default function productsDisplay(){ 
  return(` 
-  <section>
+  <section class="mb-50">
    <div class="container w-100-pr mx-auto" id="product-display"> 
   ${ 
    `<div class="mt-11">
@@ -12,15 +12,15 @@ export default function productsDisplay(){
   products.map((product,index)=>
      `<div class="content m-20 shadow-10 p-10 radius-10">
      <!------------>
-    <div class="md-flex gap-10">
-     <div>
+    <div class="lg-flex gap-10">
+     <div class="w-100-pr">
        <h3 class="p-10 mb-10 radius-3">Product no: ${index + 1}</h3>
        <img class="w-95-pr radius-5" src="${product.image}">
      </div>
     <!------------>
-     <div>
+     <div class="w-100-pr fs-18">
        <p class="green ml-5 mt-5">Product Name:</p>
-       <h2 class="p-10 m-3 radius-3">${product.product_name}</h2>
+       <h2 class="p-10 lg-fs-25 m-3 radius-3">${product.product_name}</h2>
        <p class="border-1 -blue-4"></p>
        <!------------>
        <p class="green ml-5 mt-5">Product Barcode:</p>
