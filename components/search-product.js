@@ -2,15 +2,16 @@ import products from "./products-data.js";
 
 export default function searchProduct(){  
 
- window.addEventListener('DOMContentLoaded',()=>{
+ window.addEventListener('DOMContentLoaded',()=>{ 
+  const search_product_data_load = document.getElementById('search-product-data-load');
   const btn = document.getElementById('search-btn');
 
 // ---------------------------------------------->
 
 // Search btn Listener
  btn.addEventListener('click',()=>{ 
- document.getElementById('search-product-data-load').innerHTML = "";
-const searchInput = document.getElementById('searchInput');
+  search_product_data_load.innerHTML = "";
+ const searchInput = document.getElementById('searchInput');
   
  if(!searchInput.value){ return; }
 
@@ -30,13 +31,22 @@ const dataFunction = (barcodeNumber) =>{
  ); 
 
  if(filterProducts == ""){
-   return document.getElementById('search-product-data-load').innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
+   return search_product_data_load.innerHTML = `<div class="text-center red mt-30"><h1>No Product Found!</h1></div>`;
+ }
+
+ if(filterProducts.length > 1){
+   search_product_data_load.innerHTML += `
+   <div class="mb-15 text-center">
+    <h3 class="green inline bg-pink-3 px-10 py-5 radius-20">Total Show Product: 
+     <span class="blue fs-20">${filterProducts.length}</span>
+    </h3>
+   </div>`;
  }
 
  filterProducts.map((product,index)=> 
 
-   document.getElementById('search-product-data-load').innerHTML += `
-    <div class="lg-flex gap-10">
+  search_product_data_load.innerHTML += `
+    <div class="lg-flex p-10 radius-3 mb-20 shadow-5 gap-10">
      <div class="w-100-pr">
        <h2 class="p-10 m-3 radius-3">Product no: ${product.product_id}</h2>
        <!------------->
@@ -74,6 +84,7 @@ const dataFunction = (barcodeNumber) =>{
        <!------------->
        <p class="sky ml-5 mt-5">Amazon barcode:</p>
        <p class="p-10 m-3 radius-3">${product.amazon_barcode}</p>
+       <p class="border-1 -blue-4"></p>
        <!------------->
        <p class="sky ml-5 mt-5">Description:</p>
        <p class="p-10 m-3 radius-3">${product.description}</p>
@@ -99,7 +110,7 @@ const dataFunction = (barcodeNumber) =>{
   </section> 
 
   <section class="mb-50">
-   <div class="w-90-pr mx-auto" id="search-product-data-load"></div>
+   <div class="w-95-pr mx-auto" id="search-product-data-load"></div>
   </section>
 
  `);

@@ -688,32 +688,32 @@ const products = [
  "image":"../images/6287018852720.jpg",
  "description": "15 Liter box"
 },
-// {
-//  "product_id":"54",
-//  "product_name": "",
-//  "barcode": "",
-//  "partnerSku": "",
-//  "sku": "",
-//  "packing": "",
-//  "color": "",
-//  "noon_barcode": "",
-//  "amazon_barcode": "",
-//  "image":"../images/.jpg",
-//  "description": ""
-// },
-// {
-//  "product_id":"55",
-//  "product_name": "",
-//  "barcode": "",
-//  "partnerSku": "",
-//  "sku": "",
-//  "packing": "",
-//  "color": "",
-//  "noon_barcode": "",
-//  "amazon_barcode": "",
-//  "image":"../images/.jpg",
-//  "description": ""
-// },
+{
+ "product_id":"54",
+ "product_name": "Waste Bin White 10 Liter concept_home",
+ "barcode": "6287015355781",
+ "partnerSku": "043-08-2244-02",
+ "sku": "Z831EDAF36F79A75C70FCZ-1",
+ "packing": "16 Number Plastic",
+ "color": "White",
+ "noon_barcode": "6552552902",
+ "amazon_barcode": "",
+ "image":"../images/6287015355781.jpg",
+ "description": "Plasticna, Trash Bin 244 White 46"
+},
+{
+ "product_id":"55",
+ "product_name": "Laundry Basket with Lid - A Luxurious Design Combining Elegance, Privacy, and Perfect Organization concept_home",
+ "barcode": "6287018853949",
+ "partnerSku": "063-08-3380-03",
+ "sku": "ZF04265C9089BB560E855Z-1",
+ "packing": "28 Number Plastic",
+ "color": "Pink",
+ "noon_barcode": "6308338003",
+ "amazon_barcode": "",
+ "image":"../images/6287018853949-pink.jpg",
+ "description": ""
+},
 // {
 //  "product_id":"56",
 //  "product_name": "",
